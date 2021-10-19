@@ -1,0 +1,136 @@
+* {
+    font: 1.3vw Noto Sans, sans-serif;
+    color: rgb(221, 221, 221);
+}
+
+body {
+    padding: 4%;
+    background-color: #6f2c7b;
+}
+
+.display-central {
+    width: 85vw;
+    height: 80vh;
+    margin: auto;
+}
+
+.menu-filtros {
+    width: 84.8vw;
+    display: flex;
+    background-color: #00000095;
+    padding: 8px 0px 8px 4px;
+    border-radius: 8px;
+}
+
+.ano,
+.lista-meses li {
+    cursor: pointer;
+    width: 6.4vw;
+    height: 3vw;
+    background: rgb(147, 21, 148);
+    background: linear-gradient(96deg, rgb(118, 35, 118) 17%, rgb(128, 15, 130) 100%);
+    box-shadow: 1px 1px 3px 1px rgba(255, 254, 254, 0.302);
+    border-radius: 8px;
+    border: none;
+    text-align: center;
+    margin-left: 1%;
+}
+
+.ano:hover,
+.lista-meses li:hover {
+    background: rgb(105, 15, 106);
+    background: linear-gradient(96deg, rgba(105, 15, 106, 1) 17%, rgba(147, 21, 148, 1) 100%);
+}
+
+option {
+    background-color: #00000095;
+    border-radius: 0px 10px 10px 10px;
+}
+
+.lista-meses {
+    display: flex;
+    padding: 0px 0px 0px 0px;
+    margin: 0px;
+}
+
+.lista-meses p {
+    margin-top: 12px;
+}
+
+.menu-despesas {
+    display: flex;
+}
+
+.mes-saldo {
+    display: flex;
+    width: 60vw;
+    height: 13vh;
+    background-color: #00000080;
+    margin: 8px 8px 8px 0px;
+    border-radius: 8px;
+}
+
+.despesas-lancadas {
+    width: 60vw;
+    height: 56vh;
+    background-color: #00000055;
+    border-radius: 8px;
+    border: none;
+    overflow-y: scroll;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #979797a4;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+    background: #414141;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #5f5f5f;
+}
+
+.lancamento-despesa {
+    width: 40vw;
+    height: 70vh;
+    background-color: #272727cd;
+    border-radius: 8px;
+    margin-top: 8px;
+}
+
+.despesas-lancadas th {
+    background-color: #14131390;
+}
+
+.despesas-lancadas th:first-child {
+    border-radius: 8px 0 0 0;
+}
+
+.despesas-lancadas th:last-child {
+    border-radius: 0 8px 0 0;
+}
+
+tbody td {
+    background-color: #f2f0f090;
+    text-align: center;
+    color: rgb(49, 49, 49);
+}
+
+table {
+    width: 100%;
+}
+
+.fundo-mes-saldo {
+    background-color: #161616cd;
+    width: max-content;
+    height: max-content;
+    margin: auto 4vw auto 2vw;
+    padding: 0 20px 0 20px;
+    border-radius: 8px;
+}
+
+.fundo-mes-saldo p {
+    margin: 2vh;
+}
