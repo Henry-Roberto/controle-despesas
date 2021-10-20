@@ -5,13 +5,33 @@
 
 body {
     padding: 4%;
-    background-color: #6f2c7b;
+    background-color: #31419b;
+    /* background-color: #6f2c7b; */
+    overflow-y: hidden;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #eeeeeea4;
+    border-radius: 8px;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+    background: #616161;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #8c8c8c;
+    border-radius: 8px;
 }
 
 .display-central {
     width: 85vw;
     height: 80vh;
     margin: auto;
+    padding: 12px;
+    background-color: #00000027;
+    border-radius: 8px;
 }
 
 .menu-filtros {
@@ -27,9 +47,12 @@ body {
     cursor: pointer;
     width: 6.4vw;
     height: 3vw;
-    background: rgb(147, 21, 148);
+    background: rgb(23, 21, 148);
+    background: linear-gradient(96deg, rgb(35, 48, 118) 17%, rgb(54, 57, 151) 100%);
+    box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.215);
+    /* background: rgb(147, 21, 148);
     background: linear-gradient(96deg, rgb(118, 35, 118) 17%, rgb(128, 15, 130) 100%);
-    box-shadow: 1px 1px 3px 1px rgba(255, 254, 254, 0.302);
+    box-shadow: 1px 1px 3px 1px rgba(255, 254, 254, 0.215); */
     border-radius: 8px;
     border: none;
     text-align: center;
@@ -38,8 +61,10 @@ body {
 
 .ano:hover,
 .lista-meses li:hover {
-    background: rgb(105, 15, 106);
-    background: linear-gradient(96deg, rgba(105, 15, 106, 1) 17%, rgba(147, 21, 148, 1) 100%);
+    background: rgb(28, 34, 118);
+    background: linear-gradient(96deg, rgb(56, 85, 148) 17%, rgb(34, 72, 143) 100%);
+    /* background: rgb(105, 15, 106);
+    background: linear-gradient(96deg, rgba(105, 15, 106, 1) 17%, rgba(147, 21, 148, 1) 100%); */
 }
 
 option {
@@ -72,55 +97,141 @@ option {
 
 .despesas-lancadas {
     width: 60vw;
-    height: 56vh;
+    height: 50vh;
     background-color: #00000055;
-    border-radius: 8px;
+    border-radius: 0 8px 8px 8px;
     border: none;
     overflow-y: scroll;
 }
 
-::-webkit-scrollbar-track {
-    background-color: #979797a4;
-}
-
-::-webkit-scrollbar {
-    width: 6px;
-    background: #414141;
-}
-
-::-webkit-scrollbar-thumb {
-    background: #5f5f5f;
-}
-
 .lancamento-despesa {
     width: 40vw;
-    height: 70vh;
+    height: 69.5vh;
     background-color: #272727cd;
     border-radius: 8px;
     margin-top: 8px;
 }
 
-.despesas-lancadas th {
-    background-color: #14131390;
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
 }
 
-.despesas-lancadas th:first-child {
+.teble-titulo {
+    width: 99%;
+}
+
+.teble-itens {
+    width: 100%;
+}
+
+th {
+    background-color: #141313bb;
+    width: 20%;
+}
+
+tr {
+    width: 100%;
+}
+
+td {
+    background-color: #61616127;
+}
+
+th:first-child {
     border-radius: 8px 0 0 0;
 }
 
-.despesas-lancadas th:last-child {
+th:last-child {
     border-radius: 0 8px 0 0;
 }
 
-tbody td {
+th,
+td {
+    text-align: center;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #aaaaaa15;
+}
+
+tr:hover {
+    background-color: #85858554;
+}
+
+tr:nth-child(even):hover {
+    background-color: rgba(162, 162, 162, 0.398);
+}
+
+.td-negativo {
+    color: rgb(211, 75, 75);
+}
+
+.td-positivo {
+    color: rgb(54, 181, 60);
+}
+
+.data-table {
+    width: 20%;
+}
+
+.descricao-table {
+    width: 25%;
+}
+
+.observacao-table {
+    width: 25%;
+}
+
+.observacao-item {
+    margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.valor-table {
+    width: 20%;
+}
+
+.documento-table {
+    width: 10%;
+}
+
+
+/* 
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+th {
+    background-color: #14131390;
+    width: 20%;
+}
+
+th:first-child {
+    border-radius: 8px 0 0 0;
+}
+
+th:last-child {
+    border-radius: 0 8px 0 0;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+td {
+    width: 20%;
     background-color: #f2f0f090;
     text-align: center;
     color: rgb(49, 49, 49);
-}
-
-table {
-    width: 100%;
-}
+} */
 
 .fundo-mes-saldo {
     background-color: #161616cd;
@@ -133,4 +244,19 @@ table {
 
 .fundo-mes-saldo p {
     margin: 2vh;
+}
+
+.conteiner-titulo-lancamento {
+    width: 100%;
+    height: 14vh;
+    border: none;
+    background-color: #222222f3;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.titulo-lancamento {
+    margin: auto;
+    font-size: 1.7em;
+    font-weight: bold;
 }
