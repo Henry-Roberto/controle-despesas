@@ -64,8 +64,8 @@
             </nav>
         </header>
 
-        <section class="menu-despesas">
-            <div class="informacoes-mes-atual">
+        <main class="menu-despesas">
+            <section class="informacoes-mes-atual">
                 <div class="mes-saldo">
                     <div class="fundo-mes-saldo">
                         <p>Jan</p>
@@ -119,8 +119,8 @@
                                 <td class="documento-table td-positivo">
                                     <a href="https://i.pinimg.com/236x/15/ba/b4/15bab4ee6c41dae1c5cbe3af0d9b6ef2.jpg" target="_blank" rel="noopener noreferrer"><img src="assets/img/icon-documento.png" alt="" style="width: 1.3vw;"></a>
                                 </td>
-
                             </tr>
+
                             <tr>
                                 <td class="data-table td-positivo">07/10/2021</td>
                                 <td class="descricao-table td-positivo">Internet</td>
@@ -129,23 +129,58 @@
                                 <td class="documento-table td-positivo">
                                     <a href="https://i.pinimg.com/236x/15/ba/b4/15bab4ee6c41dae1c5cbe3af0d9b6ef2.jpg" target="_blank" rel="noopener noreferrer"><img src="assets/img/icon-documento.png" alt="" style="width: 1.3vw;"></a>
                                 </td>
-
                             </tr>
 
                         </tbody>
                     </table>
                 </div>
-            </div>
-            <div class="lancamento-despesa">
-                <div class="conteiner-titulo-lancamento">
-                    <h1 class="titulo-lancamento">Lançamento</h1>
-                </div>
-                <form action="">
-                    <input type="text">
+            </section>
+            <aside class="lancamento-despesa">
+
+                <h1 class="titulo-lancamento">Lançamento</h1>
+
+                <form action="" class="form-lancamento">
+                    <div class="form-group">
+                        <label class="label-input" for="input-descricao-lancamento">Descrição</label><br>
+                        <input class="input-lancamento" type="text" id="input-descricao-lancamento" value="Intert">
+                    </div>
+
+                    <div class="conteiner-data-valor-comprovante">
+                        <div class="conteiner-data-valor">
+                            <div class="form-group">
+                                <label class="label-input" for="input-data-lancamento">Data</label><br>
+                                <input class="input-lancamento" type="text" id="input-data-lancamento" placeholder="DD/MM/YYYY" maxlength="10">
+                            </div>
+                            <div class="form-group">
+                                <label class="label-input" for="input-valor-lancamento">Valor</label><br>
+                                <input class="input-lancamento" type="text" id="input-valor-lancamento">
+                            </div>
+                        </div>
+                        <div class="conteiner-comprovante">
+                            <div class="form-group">
+                                <input type="file" id="input-comprovante-lancamento">
+                                <div class="input-comprovante-lancamento-estilizado">
+                                    <div class="upload-borda-pontilhada">Insira um comprovante</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="label-input" for="input-observacao-lancamento">Observação</label><br>
+                        <textarea class="input-lancamento" id="input-observacao-lancamento" cols="30" rows="3"></textarea>
+                    </div>
+
+                    <div class="conteiner-btn-submit">
+                        <button class="btn-submit-lancamento" type="submit">Salvar</button>
+                    </div>
                 </form>
-            </div>
-        </section>
+            </aside>
+        </main>
     </div>
+
+    <script src="src/controller/DespesasController.js"></script>
+    <script src="src/index.js"></script>
 </body>
 
 </html>

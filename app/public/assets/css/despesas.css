@@ -1,6 +1,15 @@
 * {
-    font: 1.3vw Noto Sans, sans-serif;
+    font: 1.2vw Noto Sans, sans-serif;
     color: rgb(221, 221, 221);
+}
+
+@media (max-width: 768px) {
+    .menu-despesas {
+        display: block;
+    }
+    .mes-saldo {
+        display: block;
+    }
 }
 
 body {
@@ -9,6 +18,11 @@ body {
     /* background-color: #6f2c7b; */
     overflow-y: hidden;
 }
+
+
+/* main {
+    margin: auto;
+} */
 
 ::-webkit-scrollbar-track {
     background-color: #eeeeeea4;
@@ -157,11 +171,11 @@ tr:nth-child(even) {
 }
 
 tr:hover {
-    background-color: #85858554;
+    background-color: #a3a3a354;
 }
 
 tr:nth-child(even):hover {
-    background-color: rgba(162, 162, 162, 0.398);
+    background-color: rgba(184, 184, 184, 0.398);
 }
 
 .td-negativo {
@@ -201,38 +215,6 @@ tr:nth-child(even):hover {
     width: 10%;
 }
 
-
-/* 
-table {
-    width: 100%;
-    border-collapse: collapse;
-    border-spacing: 0;
-}
-
-th {
-    background-color: #14131390;
-    width: 20%;
-}
-
-th:first-child {
-    border-radius: 8px 0 0 0;
-}
-
-th:last-child {
-    border-radius: 0 8px 0 0;
-}
-
-tr:nth-child(even) {
-    background-color: #f2f2f2;
-}
-
-td {
-    width: 20%;
-    background-color: #f2f0f090;
-    text-align: center;
-    color: rgb(49, 49, 49);
-} */
-
 .fundo-mes-saldo {
     background-color: #161616cd;
     width: max-content;
@@ -256,7 +238,83 @@ td {
 }
 
 .titulo-lancamento {
-    margin: auto;
-    font-size: 1.7em;
+    width: 100%;
+    border: none;
+    padding: 4.5vh 0 4.5vh 0;
+    margin: 0;
+    background-color: #222222f3;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 1.5em;
     font-weight: bold;
+}
+
+.conteiner-data-valor-comprovante {
+    display: flex;
+}
+
+.form-group {
+    margin: 8px 0 8px 8px;
+}
+
+.label-input {
+    font-size: 1.1vw;
+    color: rgb(213, 213, 213);
+}
+
+.input-lancamento {
+    font-size: 1.1vw;
+    border-radius: 4px;
+    border: none;
+    background-color: #dfdfdf;
+    color: rgb(39, 39, 39);
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+    margin: 8px;
+}
+
+#input-descricao-lancamento {
+    width: 65%;
+}
+
+#input-data-lancamento,
+#input-valor-lancamento {
+    width: 10vw;
+}
+
+#input-comprovante-lancamento {
+    display: none;
+}
+
+.input-comprovante-lancamento-estilizado {
+    width: 8vw;
+    height: 16vh;
+    background-color: #ededede0;
+    padding: 4%;
+    margin: 8px;
+    border-radius: 2px;
+    border: none;
+}
+
+.upload-borda-pontilhada {
+    width: 7.5vw;
+    height: 15vh;
+    border: 3px dashed #35353527;
+    color: rgb(140, 140, 140);
+    text-align: center;
+}
+
+.conteiner-btn-submit {
+    width: 100%;
+    text-align: center;
+}
+
+.btn-submit-lancamento {
+    border: none;
+    text-align: center;
+    background-color: #4984DC;
+    border-radius: 4px;
+    width: 10vw;
+    height: 8vh;
 }
