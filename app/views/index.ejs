@@ -23,7 +23,7 @@
                     <option value="2023">2023</option>
                     <option value="2024">2024</option>
                 </select>
-                <ul type="none" class="lista-meses">
+                <ul type="none" class="lista-meses remover-selecao">
                     <li>
                         <p>Jan</p>
                     </li>
@@ -86,10 +86,10 @@
                     </thead>
                 </table>
                 <div class="despesas-lancadas">
-                    <table class="teble-itens">
+                    <table class="teble-itens" id="tabela-lancamentos">
                         <tbody>
 
-                            <tr>
+                            <!-- <tr>
                                 <td class="data-table td-negativo">07/10/2021</td>
                                 <td class="descricao-table td-negativo">Internet</td>
                                 <td>
@@ -100,17 +100,6 @@
                                     <a href="https://i.pinimg.com/236x/15/ba/b4/15bab4ee6c41dae1c5cbe3af0d9b6ef2.jpg" target="_blank" rel="noopener noreferrer"><img src="assets/img/icon-documento.png" alt="" style="width: 1.3vw;"></a>
                                 </td>
                             </tr>
-
-                            <tr>
-                                <td class="data-table td-negativo">07/10/2021</td>
-                                <td class="descricao-table td-negativo">Internet</td>
-                                <td class="observacao-item td-negativo">Internet foi paga atrasada</td>
-                                <td class="valor-table td-negativo">-1500,00 R$</td>
-                                <td class="documento-table td-negativo">
-                                    <a href="https://i.pinimg.com/236x/15/ba/b4/15bab4ee6c41dae1c5cbe3af0d9b6ef2.jpg" target="_blank" rel="noopener noreferrer"><img src="assets/img/icon-documento.png" alt="" style="width: 1.3vw;"></a>
-                                </td>
-                            </tr>
-
                             <tr>
                                 <td class="data-table td-positivo">07/10/2021</td>
                                 <td class="descricao-table td-positivo">Internet</td>
@@ -119,17 +108,7 @@
                                 <td class="documento-table td-positivo">
                                     <a href="https://i.pinimg.com/236x/15/ba/b4/15bab4ee6c41dae1c5cbe3af0d9b6ef2.jpg" target="_blank" rel="noopener noreferrer"><img src="assets/img/icon-documento.png" alt="" style="width: 1.3vw;"></a>
                                 </td>
-                            </tr>
-
-                            <tr>
-                                <td class="data-table td-positivo">07/10/2021</td>
-                                <td class="descricao-table td-positivo">Internet</td>
-                                <td class="observacao-item td-positivo">Internet foi paga atrasada</td>
-                                <td class="valor-table td-positivo">1500,00 R$</td>
-                                <td class="documento-table td-positivo">
-                                    <a href="https://i.pinimg.com/236x/15/ba/b4/15bab4ee6c41dae1c5cbe3af0d9b6ef2.jpg" target="_blank" rel="noopener noreferrer"><img src="assets/img/icon-documento.png" alt="" style="width: 1.3vw;"></a>
-                                </td>
-                            </tr>
+                            </tr> -->
 
                         </tbody>
                     </table>
@@ -139,28 +118,30 @@
 
                 <h1 class="titulo-lancamento">Lançamento</h1>
 
-                <form action="" class="form-lancamento">
+                <form class="conteiner-from" id="form-lancamento">
                     <div class="form-group">
                         <label class="label-input" for="input-descricao-lancamento">Descrição</label><br>
-                        <input class="input-lancamento" type="text" id="input-descricao-lancamento" value="Intert">
+                        <input class="input-lancamento" type="text" id="input-descricao-lancamento" name="descricao" maxlength="20" value="Energia nuclear" required>
                     </div>
 
                     <div class="conteiner-data-valor-comprovante">
                         <div class="conteiner-data-valor">
                             <div class="form-group">
                                 <label class="label-input" for="input-data-lancamento">Data</label><br>
-                                <input class="input-lancamento" type="text" id="input-data-lancamento" placeholder="DD/MM/YYYY" maxlength="10">
+                                <input class="input-lancamento" type="date" id="input-data-lancamento" name="data" placeholder="DD/MM/YYYY" maxlength="10" value="2021-10-13" required>
                             </div>
                             <div class="form-group">
                                 <label class="label-input" for="input-valor-lancamento">Valor</label><br>
-                                <input class="input-lancamento" type="text" id="input-valor-lancamento">
+                                <input class="input-lancamento" type="number" step="0.01" id="input-valor-lancamento" name="valor" maxlength="10" value="23.50" required>
                             </div>
                         </div>
                         <div class="conteiner-comprovante">
                             <div class="form-group">
-                                <input type="file" id="input-comprovante-lancamento">
+                                <input type="file" id="input-comprovante-lancamento" name="comprovante">
                                 <div class="input-comprovante-lancamento-estilizado">
-                                    <div class="upload-borda-pontilhada">Insira um comprovante</div>
+                                    <div class="upload-borda-pontilhada">
+                                        <p>Insira um comprovante</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -168,7 +149,7 @@
 
                     <div class="form-group">
                         <label class="label-input" for="input-observacao-lancamento">Observação</label><br>
-                        <textarea class="input-lancamento" id="input-observacao-lancamento" cols="30" rows="3"></textarea>
+                        <textarea class="input-lancamento" id="input-observacao-lancamento" name="observacao"></textarea>
                     </div>
 
                     <div class="conteiner-btn-submit">
@@ -179,6 +160,8 @@
         </main>
     </div>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
     <script src="src/controller/DespesasController.js"></script>
     <script src="src/index.js"></script>
 </body>

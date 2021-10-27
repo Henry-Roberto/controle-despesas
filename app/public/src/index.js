@@ -1,1 +1,1 @@
-window.app = new DespesasController();
+window.app = new DespesasController("form-lancamento", "tabela-lancamentos");
