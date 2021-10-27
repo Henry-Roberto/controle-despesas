@@ -44,7 +44,7 @@ class DespesasController {
             [...this.formEl].forEach(function(campo, index) {
 
                 lancamento[campo.name] = campo.value;
-                // campo.value = '';
+                campo.value = '';
             });
 
             lancamento.valor = parseFloat(lancamento.valor);
