@@ -56,8 +56,8 @@ body {
     border-radius: 8px;
 }
 
-.ano,
-.lista-meses li {
+.filtro-ano,
+.filtro-mes li {
     cursor: pointer;
     width: 6.4vw;
     height: 3vw;
@@ -70,11 +70,14 @@ body {
     border-radius: 8px;
     border: none;
     text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
     margin-left: 1%;
 }
 
-.ano:hover,
-.lista-meses li:hover {
+.filtro-ano:hover,
+.filtro-mes li:hover {
     background: rgb(28, 34, 118);
     background: linear-gradient(96deg, rgb(56, 85, 148) 17%, rgb(34, 72, 143) 100%);
     /* background: rgb(105, 15, 106);
@@ -90,7 +93,7 @@ body {
     user-select: none;
 }
 
-.lista-meses li:active {
+.filtro-mes li:active {
     background: rgb(44, 51, 136);
     background: linear-gradient(96deg, rgb(71, 101, 165) 17%, rgb(53, 92, 163) 100%);
 }
@@ -100,13 +103,13 @@ option {
     border-radius: 0px 10px 10px 10px;
 }
 
-.lista-meses {
+.filtro-mes {
     display: flex;
     padding: 0px 0px 0px 0px;
     margin: 0px;
 }
 
-.lista-meses p {
+.filtro-mes p {
     margin-top: 12px;
 }
 
@@ -196,11 +199,11 @@ tr:nth-child(even):hover {
     background-color: rgba(184, 184, 184, 0.398);
 }
 
-.td-negativo {
+.valor-negativo {
     color: rgb(211, 75, 75);
 }
 
-.td-positivo {
+.valor-positivo {
     color: rgb(54, 181, 60);
 }
 
